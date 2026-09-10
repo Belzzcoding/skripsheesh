@@ -26,44 +26,6 @@ SIPESTAR sendiri merupakan sistem informasi pengelolaan penginapan berbasis web 
 
 ---
 
-## 🧠 Gambaran Penelitian
-
-Secara umum, penelitian ini mengembangkan alur:
-
-```text
-             SIPESTAR
-                 │
-                 ▼
-           HTTP Request
-                 │
-                 ▼
-          Logging Activity
-                 │
-                 ▼
-         Feature Extraction
-                 │
-                 ▼
-        ┌─────────────────┐
-        │  Random Forest  │
-        │   Classifier    │
-        └─────────────────┘
-                 │
-                 ▼
-       Traffic Classification
-                 │
-        ┌────────┼────────┐
-        ▼        ▼        ▼
-     Normal   Brute     SQL
-              Force    Injection
-                 │
-                 ▼
-          Monitoring Dashboard
-```
-
-Data penelitian diperoleh melalui **pengujian terkendali pada SIPESTAR yang dijalankan di lingkungan lokal**, kemudian aktivitas HTTP dicatat melalui logging untuk selanjutnya diolah menjadi dataset penelitian.
-
----
-
 ## 🔬 Ruang Lingkup
 
 Penelitian ini berfokus pada:
@@ -85,17 +47,7 @@ Penelitian **tidak berfokus pada** jenis serangan lain seperti XSS, DDoS, malwar
 
 ## 🛠️ Teknologi yang Digunakan
 
-| Komponen             | Teknologi                     |
-| -------------------- | ----------------------------- |
-| Programming Language | Python                        |
-| Machine Learning     | Scikit-learn                  |
-| Data Processing      | Pandas                        |
-| ML Algorithm         | Random Forest                 |
-| Backend              | Flask / FastAPI               |
-| Dashboard            | Bootstrap + Chart.js          |
-| Database             | SQLite / PostgreSQL / MySQL   |
-| Local Environment    | XAMPP / Laragon               |
-| Attack Simulation    | Hydra, SQLMap, Payload Manual |
+`Python` · `Random Forest` · `Scikit-learn` · `Pandas` · `Flask/FastAPI` · `Bootstrap` · `Chart.js` · `XAMPP/Laragon`
 
 ---
 
@@ -133,16 +85,6 @@ Algoritma utama yang digunakan dalam penelitian ini adalah:
 
 **Random Forest Classifier**
 
-Model digunakan untuk melakukan klasifikasi terhadap traffic SIPESTAR ke dalam tiga kelas:
-
-```text
-Normal
-   │
-   ├── Brute Force
-   │
-   └── SQL Injection
-```
-
 Evaluasi model dilakukan menggunakan:
 
 * Accuracy
@@ -167,7 +109,8 @@ skripsheesh/
 │
 ├── docs/
 │   ├── proposal/
-│   ├── skripsi/
+│   ├── hasil/
+│   ├── tutup/
 │   └── references/
 │
 ├── diagrams/
@@ -175,9 +118,6 @@ skripsheesh/
 │   ├── activity/
 │   ├── flowmap/
 │   └── architecture/
-│
-└── thesis/
-    └── skripsi.docx
 ```
 
 > Struktur folder di atas dapat berubah menyesuaikan kebutuhan dokumentasi selama proses penelitian.
@@ -190,9 +130,7 @@ Repository ini merupakan bagian dari dua repository utama dalam pengerjaan skrip
 
 ### 📚 Skripsi & Dokumentasi
 
-Repository ini.
-
-Berisi:
+Repository ini berisi:
 
 * Dokumen skripsi
 * Proposal
@@ -218,31 +156,23 @@ Repository terpisah yang berisi komponen teknis Machine Learning, seperti:
 
 ## 🗺️ Roadmap
 
-Progress penelitian akan dikembangkan secara bertahap:
+### 📑 Proposal — Bab 1–3
 
-* [x] Menentukan ide/topik penelitian
-* [x] Menentukan studi kasus SIPESTAR
-* [x] Menentukan jenis serangan
-* [x] Menentukan algoritma Random Forest
-* [x] Menyusun rancangan awal penelitian
-* [ ] Studi literatur
-* [ ] Perancangan arsitektur sistem
-* [ ] Deployment SIPESTAR ke lingkungan testing
-* [ ] Simulasi traffic normal
-* [ ] Simulasi Brute Force
-* [ ] Simulasi SQL Injection
-* [ ] Pengumpulan HTTP log
-* [ ] Feature extraction
-* [ ] Data labeling
-* [ ] Dataset preparation
-* [ ] Training Random Forest
-* [ ] Evaluasi model
-* [ ] Implementasi WIDS
-* [ ] Implementasi dashboard monitoring
-* [ ] Integration testing
-* [ ] Analisis hasil
-* [ ] Penyusunan laporan akhir
+* [ ] Bab 1 — Pendahuluan
+* [ ] Bab 2 — Tinjauan Pustaka
+* [ ] Bab 3 — Metodologi Penelitian
+
+### 🔬 Hasil Penelitian — Bab 4–5
+
+* [ ] Bab 4 — Hasil dan Pembahasan
+* [ ] Bab 5 — Kesimpulan dan Saran
+
+### 🏁 Penutup — Bab 6
+
+* [ ] Bab 6 — Penutup
+* [ ] Finalisasi dokumen
 * [ ] Sidang Skripsi 💀
+
 
 ---
 
@@ -281,9 +211,7 @@ Dengan demikian, penelitian tidak hanya berhenti pada pembangunan model Machine 
 
 Seluruh aktivitas simulasi serangan dalam penelitian ini dilakukan **secara terkendali pada lingkungan lokal/testing** dan ditujukan untuk kepentingan penelitian.
 
-> **Do not test your "skills" on systems you don't own.**
->
-> *Your thesis should detect attacks, not create legal problems. 💀*
+> *Detect attacks, not your own downfall.* 💀
 
 ---
 
@@ -292,14 +220,13 @@ Seluruh aktivitas simulasi serangan dalam penelitian ini dilakukan **secara terk
 **Belzz Urameshi**
 
 Final Year Student — Information Systems
-
-Cyber Security & Machine Learning Enthusiast
+Bacharuddin Jusuf Habibie Institute of Technology
 
 ---
 
 ## 📝 Status
 
-> 🚧 **This thesis is still under development.**
+> 🚧 **Skripsi ini masih dalam tahap pengerjaan.**
 
 Things may change.
 
